@@ -37,7 +37,7 @@ For more detailed about our pipeline, please refer to our paper.
 
 
 
-## Reference:
+## Reference
 ```latex
 @article{he2026deepfetal,
   title={An Epistemic Generalist AI System for Fetal Ultrasound Interpretation},
@@ -46,5 +46,5 @@ For more detailed about our pipeline, please refer to our paper.
 }
 ```
 
-## Acknowledgement:
+## Acknowledgement
 We thank all the collaborators who supported the development and evaluation of DeepFetal. We also acknowledge the open-source community and prior research in medical imaging, multimodal learning, and large language models, which provided important foundations for this work.
