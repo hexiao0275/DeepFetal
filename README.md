@@ -1,6 +1,6 @@
 # An Epistemic Generalist AI System for Fetal Ultrasound Interpretation
 
-[Xiao He](#)<sup>1,12*</sup>, [Huangxuan Zhao](#)<sup>1,12*†</sup>, [Linxia Wu](#)<sup>4*</sup>, [Jiancheng Pan](#)<sup>2</sup>, [Yingjie Wang](#)<sup>8</sup>, [Siyuan Liu](#)<sup>1,12</sup>, [Lei Chen](#)<sup>4*</sup>, [Dongjing Shan](#)<sup>9</sup>, [Jiqing Xuan](#)<sup>10</sup>, [Wei Yu](#)<sup>11</sup>, [Chengcheng Zhu](#)<sup>5</sup>, [Yong Luo](#)<sup>1,12†</sup>, [Dacheng Tao](#)<sup>3†</sup>, and [Bo Du](#)<sup>1,12†</sup>
+[Xiao He](#)<sup>1,12*</sup>, [Huangxuan Zhao](#)<sup>1,12*†</sup>, [Linxia Wu](#)<sup>4*</sup>, [Jiancheng Pan](#)<sup>2</sup>, [Yingjie Wang](#)<sup>8</sup>, [Siyuan Liu](#)<sup>1,12</sup>, [Lei Chen](#)<sup>4</sup>, [Dongjing Shan](#)<sup>9</sup>, [Jiqing Xuan](#)<sup>10</sup>, [Wei Yu](#)<sup>11</sup>, [Chengcheng Zhu](#)<sup>5</sup>, [Yong Luo](#)<sup>1,12†</sup>, [Dacheng Tao](#)<sup>3†</sup>, and [Bo Du](#)<sup>1,12†</sup>
 
 <sup>1</sup>School of Computer Science, Wuhan University, Hubei, China  
 <sup>2</sup>Tsinghua University, Beijing, China  
