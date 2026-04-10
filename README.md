@@ -15,8 +15,8 @@
 
 <sup>*</sup>Equal contributions  <sup>†</sup>Corresponding author
 
-<a href='https://arxiv.org/abs/2601.00393'><img src='https://img.shields.io/badge/arXiv-2601.00393-b31b1b?logo=arxiv'></a> 
-<a href='https://huggingface.co/Yuppie1204/NeoVerse'><img src='https://img.shields.io/badge/Hugging Face-Model-gold?logo=huggingface'></a> 
+<a href=''><img src='https://img.shields.io/badge/arXiv-2601.00393-b31b1b?logo=arxiv'></a> 
+<a href=''><img src='https://img.shields.io/badge/Hugging Face-Model-gold?logo=huggingface'></a> 
 <a href='http://deepfetal.com/'><img src='https://img.shields.io/badge/DeepFetal-Website-pink'></a>
 
 > *DeepFetal is an epistemic multimodal AI system for full-gestation fetal ultrasound interpretation, enabling structured view understanding, traceable diagnostic reasoning, and robust clinical decision support.*
