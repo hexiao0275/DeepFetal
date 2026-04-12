@@ -47,8 +47,8 @@ This document provides a concise setup guide for running `deepfetal_code` for pr
 ## Step 1: Clone the Repository
 
 ```bash
-git clone <your-repo-url> deepfetal_code
-cd deepfetal_code
+git clone https://github.com/hexiao0275/DeepFetal.git
+cd DeepFetal
 ```
 
 ## Step 2: Create the Python Environment
