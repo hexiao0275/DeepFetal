@@ -1,0 +1,51 @@
+early_cls:
+  script: "deepfetal.early_classifier"
+#  device: { use_cuda: true, gpu_id: 0 }
+  model:
+    weights_path: "./checkpoints/1_1/best.pt"
+    conf_threshold: 0.5
+    class_conf_threshold: 0.85
+  out_json: "./workspace/preprocess/1_1_classification_results.json"
+
+normal_cls:
+  script: "deepfetal.normal_classifier"
+  model:
+    num_classes: 41
+    weights_path: "./checkpoints/1_2/41cls_model_117.pth"
+    class_indices_path: "./checkpoints/1_2/class_indices_41.json"
+  dataloader: { img_size: 224, batch_size: 1, num_workers: 4 }
+  out_json: "./workspace/preprocess/1_2_classification_results_with_probabilities_224_eval.json"
+
+early_filter:
+  script: "deepfetal.early_filter"
+  common: { threshold: 0.60, max_per_label: 2, max_total_per_case: 30 }
+  out_json: "./workspace/preprocess/2_1_best_images_per_case_top_2_hubeirenming_zhao.json"
+  out_case_ids: "./workspace/preprocess/2_1_case_ids_zhao.txt"
+  out_missing: "./workspace/preprocess/2_1_missing_cases_zhao.txt"
+
+normal_filter:
+  script: "deepfetal.normal_filter"
+  common: { threshold: 0.30, max_per_label: 2, max_total_per_case: 30 }
+  out_json: "./workspace/preprocess/2_2_best_images_per_case_top_2_hubeirenming.json"
+  out_case_ids: "./workspace/preprocess/2_2_case_ids.txt"
+  out_missing: "./workspace/preprocess/2_2_missing_cases.txt"
+
+merge:
+  script: "deepfetal.merge_cases"
+  common: { max_per_label: 2, max_total_per_case: 30 }
+  output_json: "./workspace/preprocess/3_filtered_best_images_hubeirenming.json"
+  master_case_source: "normal"
+  dedup_scope: "global"
+  early_first: true
+
+report:
+  script: "deepfetal.build_report_dataset"
+  out_json: "./workspace/preprocess/4_ultrasound_reports_using_excel.json"
+
+convert:
+  script: "deepfetal.convert_prompt_jsonl"
+  en_excel: "./data/metadata/plane_translation.xlsx"
+  out_json: "./workspace/preprocess/5_1_ultrasound_reports_convert.jsonl"
+
+image_prompt:
+  script: "deepfetal.image_prompt"
