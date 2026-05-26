@@ -1,8 +1,6 @@
 # An Epistemic Generalist AI System for Fetal Ultrasound Interpretation
 
-<a href='https://arxiv.org/abs/2510.12953'><img src='https://img.shields.io/badge/arXiv-2510.12953-b31b1b?logo=arxiv'></a> 
-<a href=''><img src='https://img.shields.io/badge/Hugging Face-Model-gold?logo=huggingface'></a> 
-<a href='http://deepfetal.com/'><img src='https://img.shields.io/badge/DeepFetal-Website-pink'></a>
+[Dataset](https://huggingface.co/datasets/Heedgood/DeepFetal) ｜[ Model](https://huggingface.co/Heedgood/DeepFetal) | [Website](http://deepfetal.com/)
 
 > *DeepFetal is an epistemic multimodal AI system for full-gestation fetal ultrasound interpretation, enabling structured view understanding, traceable diagnostic reasoning, and robust clinical decision support.*
 
