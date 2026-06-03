@@ -97,9 +97,9 @@ def main(args):
     max_total_per_case = args.early_filter["common"]["max_total_per_case"]
 
     # IN_PATH = "eval_multi_model_parallel/classification_results.json"
-    # IN_PATH = "eval_hubeirenming_zhaoyun_classification_results_zhao/classification_results.json"
+    # IN_PATH = "eval_classification_results/classification_results.json"
     IN_PATH = os.path.join(args.early_cls["output_folder"], args.early_cls["out_json"])
-    # OUT_JSON = "best_images_per_case_top_2_hubeirenming_zhao.json"
+    # OUT_JSON = "best_images_per_case_top_2.json"
     OUT_JSON = args.early_filter["out_json"]
     # OUT_CASE_IDS = "case_ids_zhao.txt"
     OUT_CASE_IDS = args.early_filter["out_case_ids"]

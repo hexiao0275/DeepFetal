@@ -19,21 +19,21 @@ normal_cls:
 early_filter:
   script: "deepfetal.early_filter"
   common: { threshold: 0.60, max_per_label: 2, max_total_per_case: 30 }
-  out_json: "./workspace/preprocess/2_1_best_images_per_case_top_2_hubeirenming_zhao.json"
+  out_json: "./workspace/preprocess/2_1_best_images_per_case_top_2.json"
   out_case_ids: "./workspace/preprocess/2_1_case_ids_zhao.txt"
   out_missing: "./workspace/preprocess/2_1_missing_cases_zhao.txt"
 
 normal_filter:
   script: "deepfetal.normal_filter"
   common: { threshold: 0.30, max_per_label: 2, max_total_per_case: 30 }
-  out_json: "./workspace/preprocess/2_2_best_images_per_case_top_2_hubeirenming.json"
+  out_json: "./workspace/preprocess/2_2_best_images_per_case_top_2.json"
   out_case_ids: "./workspace/preprocess/2_2_case_ids.txt"
   out_missing: "./workspace/preprocess/2_2_missing_cases.txt"
 
 merge:
   script: "deepfetal.merge_cases"
   common: { max_per_label: 2, max_total_per_case: 30 }
-  output_json: "./workspace/preprocess/3_filtered_best_images_hubeirenming.json"
+  output_json: "./workspace/preprocess/3_filtered_best_images.json"
   master_case_source: "normal"
   dedup_scope: "global"
   early_first: true

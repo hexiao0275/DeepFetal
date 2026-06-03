@@ -153,7 +153,7 @@ def build_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-name", default=None, help="Override run.name")
     parser.add_argument("--workspace_dir", default=DEFAULT_WORKSPACE_DIR, help="Workspace directory for intermediate outputs")
-    parser.add_argument("--image_root", default="./data/samples/PatientID704_ExamID10143_trimester2", help="Case folder path")
+    parser.add_argument("--image_root", default="./data/samples/sample_case_trimester2", help="Case folder path")
     parser.add_argument("--config_path", default="./config/config.yaml", help="")
     parser.add_argument("--batch_prediction", action="store_true", help="Batch mode is not supported.")
     parser.add_argument("--excel_path", default="./data/metadata/pregnancy_stage.xlsx", help="Excel path used to determine early pregnancy")

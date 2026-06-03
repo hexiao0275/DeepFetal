@@ -14,13 +14,13 @@ def main(args):
     # === Paths ===
     # excel_path       = "孕周提取完整结果_gpt_results_only_eval_with_stage.xlsx"
     excel_path = args.excel_path
-    # json_normal_path = "best_images_per_case_top_2_hubeirenming.json"
+    # json_normal_path = "best_images_per_case_top_2.json"
     # json_normal_path = args.merge["json_normal_path"]
     json_normal_path = args.normal_filter["out_json"]
-    # json_early_path  = "best_images_per_case_top_2_hubeirenming_zhao.json"
+    # json_early_path  = "best_images_per_case_top_2.json"
     # json_early_path  = args.merge["json_early_path"]
     json_early_path  = args.early_filter["out_json"]
-    # output_path      = "filtered_best_images_hubeirenming.json"
+    # output_path      = "filtered_best_images.json"
     output_path      = args.merge["output_json"]
 
     # === Parameters ===

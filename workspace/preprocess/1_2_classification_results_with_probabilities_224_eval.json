@@ -1,5 +1,5 @@
 {
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00625009.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00625009.png": {
         "probabilities": {
             "Leg": 0.852424681186676,
             "Foot": 0.12896914780139923,
@@ -45,7 +45,7 @@
         },
         "predicted_label": "Leg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00669567.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00669567.png": {
         "probabilities": {
             "AAV": 0.9996838569641113,
             "DDA": 0.0003159928019158542,
@@ -91,7 +91,7 @@
         },
         "predicted_label": "AAV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00073801.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00073801.png": {
         "probabilities": {
             "neg": 1.0,
             "Gallbladder": 1.4144509175029185e-10,
@@ -137,7 +137,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00756643.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00756643.png": {
         "probabilities": {
             "neg": 0.9441801309585571,
             "4CH": 0.05544636398553848,
@@ -183,7 +183,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00479426.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00479426.png": {
         "probabilities": {
             "PAB": 0.9998990297317505,
             "RVOT": 9.454446990275756e-05,
@@ -229,7 +229,7 @@
         },
         "predicted_label": "PAB"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00850319.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00850319.png": {
         "probabilities": {
             "neg": 0.5997772216796875,
             "SVSK": 0.3985004127025604,
@@ -275,7 +275,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00379289.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00379289.png": {
         "probabilities": {
             "Forearm": 0.9964749217033386,
             "Foot": 0.0021303012035787106,
@@ -321,7 +321,7 @@
         },
         "predicted_label": "Forearm"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00650945.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00650945.png": {
         "probabilities": {
             "Palm": 0.9973465204238892,
             "Forearm": 0.0026473465841263533,
@@ -367,7 +367,7 @@
         },
         "predicted_label": "Palm"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00871022.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00871022.png": {
         "probabilities": {
             "Palm": 0.9231564402580261,
             "Forearm": 0.07684050500392914,
@@ -413,7 +413,7 @@
         },
         "predicted_label": "Palm"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00686405.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00686405.png": {
         "probabilities": {
             "Leg": 0.9840871691703796,
             "Forearm": 0.014210657216608524,
@@ -459,7 +459,7 @@
         },
         "predicted_label": "Leg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00266837.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00266837.png": {
         "probabilities": {
             "neg": 0.9983175992965698,
             "Bladder": 0.0011798248160630465,
@@ -505,7 +505,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00224605.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00224605.png": {
         "probabilities": {
             "Spine": 0.999995231628418,
             "AAV": 2.0554819002427394e-06,
@@ -551,7 +551,7 @@
         },
         "predicted_label": "Spine"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00393250.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00393250.png": {
         "probabilities": {
             "neg": 0.8865311741828918,
             "LVOT": 0.11257840692996979,
@@ -597,7 +597,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00794772.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00794772.png": {
         "probabilities": {
             "Lip": 0.9999794960021973,
             "Palm": 1.1281914339633659e-05,
@@ -643,7 +643,7 @@
         },
         "predicted_label": "Lip"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00275486.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00275486.png": {
         "probabilities": {
             "Foot": 1.0,
             "Palm": 4.4615891536814445e-10,
@@ -689,7 +689,7 @@
         },
         "predicted_label": "Foot"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00016435.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00016435.png": {
         "probabilities": {
             "3DFace": 0.9999994039535522,
             "neg": 4.899026748717006e-07,
@@ -735,7 +735,7 @@
         },
         "predicted_label": "3DFace"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00465147.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00465147.png": {
         "probabilities": {
             "neg": 0.5755952000617981,
             "4CH": 0.42406004667282104,
@@ -781,7 +781,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00787469.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00787469.png": {
         "probabilities": {
             "Bladder": 0.999789297580719,
             "Gallbladder": 0.0002017915976466611,
@@ -827,7 +827,7 @@
         },
         "predicted_label": "Bladder"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00720256.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00720256.png": {
         "probabilities": {
             "AAV": 0.8364447355270386,
             "DDA": 0.1634872704744339,
@@ -873,7 +873,7 @@
         },
         "predicted_label": "AAV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00712527.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00712527.png": {
         "probabilities": {
             "Forearm": 0.7422357201576233,
             "Leg": 0.20784924924373627,
@@ -919,7 +919,7 @@
         },
         "predicted_label": "Forearm"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00970913.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00970913.png": {
         "probabilities": {
             "SideFace": 0.999997615814209,
             "NT": 1.6266955071841949e-06,
@@ -965,7 +965,7 @@
         },
         "predicted_label": "SideFace"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00357266.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00357266.png": {
         "probabilities": {
             "3VV": 0.9988093376159668,
             "PAB": 0.00080441206227988,
@@ -1011,7 +1011,7 @@
         },
         "predicted_label": "3VV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00045466.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00045466.png": {
         "probabilities": {
             "Gallbladder": 0.7349320650100708,
             "neg": 0.19504095613956451,
@@ -1057,7 +1057,7 @@
         },
         "predicted_label": "Gallbladder"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00160872.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00160872.png": {
         "probabilities": {
             "Bladder": 0.8835734128952026,
             "neg": 0.10986033827066422,
@@ -1103,7 +1103,7 @@
         },
         "predicted_label": "Bladder"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00953681.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00953681.png": {
         "probabilities": {
             "neg": 0.9998420476913452,
             "4CH": 0.00014374812599271536,
@@ -1149,7 +1149,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00861455.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00861455.png": {
         "probabilities": {
             "neg": 0.981819748878479,
             "4CH-H": 0.012016468681395054,
@@ -1195,7 +1195,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00971675.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00971675.png": {
         "probabilities": {
             "Bladder": 0.999996542930603,
             "neg": 2.0825241335842293e-06,
@@ -1241,7 +1241,7 @@
         },
         "predicted_label": "Bladder"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00641567.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00641567.png": {
         "probabilities": {
             "neg": 0.9996505975723267,
             "LVOT": 0.00032198932603932917,
@@ -1287,7 +1287,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00195570.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00195570.png": {
         "probabilities": {
             "Spine": 0.9999797344207764,
             "neg": 1.9455850633676164e-05,
@@ -1333,7 +1333,7 @@
         },
         "predicted_label": "Spine"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00601085.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00601085.png": {
         "probabilities": {
             "3VV": 0.9999984502792358,
             "PAB": 1.4259518366088741e-06,
@@ -1379,7 +1379,7 @@
         },
         "predicted_label": "3VV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00094849.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00094849.png": {
         "probabilities": {
             "Spine": 0.9999991655349731,
             "DDA": 3.508014287945116e-07,
@@ -1425,7 +1425,7 @@
         },
         "predicted_label": "Spine"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00524753.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00524753.png": {
         "probabilities": {
             "VaVp": 0.9999465942382812,
             "neg": 4.5156390115153044e-05,
@@ -1471,7 +1471,7 @@
         },
         "predicted_label": "VaVp"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00973724.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00973724.png": {
         "probabilities": {
             "4CH": 0.9998524188995361,
             "CTAR": 0.00013356006820686162,
@@ -1517,7 +1517,7 @@
         },
         "predicted_label": "4CH"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00380803.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00380803.png": {
         "probabilities": {
             "3DFace": 0.9999995231628418,
             "Palate": 8.835881004642943e-08,
@@ -1563,7 +1563,7 @@
         },
         "predicted_label": "3DFace"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00502885.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00502885.png": {
         "probabilities": {
             "Palate": 0.8141148090362549,
             "ABS": 0.18588407337665558,
@@ -1609,7 +1609,7 @@
         },
         "predicted_label": "Palate"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00687187.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00687187.png": {
         "probabilities": {
             "Bladder": 0.9999979734420776,
             "Gallbladder": 1.1820625331893098e-06,
@@ -1655,7 +1655,7 @@
         },
         "predicted_label": "Bladder"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00042533.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00042533.png": {
         "probabilities": {
             "Leg": 0.9999994039535522,
             "Forearm": 6.026067467246321e-07,
@@ -1701,7 +1701,7 @@
         },
         "predicted_label": "Leg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00493745.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00493745.png": {
         "probabilities": {
             "Leg": 0.8280741572380066,
             "Forearm": 0.17151640355587006,
@@ -1747,7 +1747,7 @@
         },
         "predicted_label": "Leg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00334057.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00334057.png": {
         "probabilities": {
             "LVOT": 0.6815983057022095,
             "neg": 0.3178226053714752,
@@ -1793,7 +1793,7 @@
         },
         "predicted_label": "LVOT"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00658171.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00658171.png": {
         "probabilities": {
             "DDA": 0.9495061635971069,
             "AAV": 0.05044075846672058,
@@ -1839,7 +1839,7 @@
         },
         "predicted_label": "DDA"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00090168.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00090168.png": {
         "probabilities": {
             "Kidney": 0.9558278322219849,
             "AC": 0.026997553184628487,
@@ -1885,7 +1885,7 @@
         },
         "predicted_label": "Kidney"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00372515.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00372515.png": {
         "probabilities": {
             "HL": 0.9999998807907104,
             "FL": 4.604439496347368e-08,
@@ -1931,7 +1931,7 @@
         },
         "predicted_label": "HL"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00828787.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00828787.png": {
         "probabilities": {
             "SideFace": 0.9999996423721313,
             "Lip": 1.025451510372477e-07,
@@ -1977,7 +1977,7 @@
         },
         "predicted_label": "SideFace"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00454925.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00454925.png": {
         "probabilities": {
             "DDA": 0.762911856174469,
             "AAV": 0.20501795411109924,
@@ -2023,7 +2023,7 @@
         },
         "predicted_label": "DDA"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00783460.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00783460.png": {
         "probabilities": {
             "3VV": 0.9999440908432007,
             "PAB": 5.326726386556402e-05,
@@ -2069,7 +2069,7 @@
         },
         "predicted_label": "3VV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00987454.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00987454.png": {
         "probabilities": {
             "PAB": 0.9919114708900452,
             "neg": 0.008017489686608315,
@@ -2115,7 +2115,7 @@
         },
         "predicted_label": "PAB"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00537105.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00537105.png": {
         "probabilities": {
             "neg": 0.947893500328064,
             "4CH-H": 0.041714709252119064,
@@ -2161,7 +2161,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00450991.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00450991.png": {
         "probabilities": {
             "KidneyVessel": 0.9999943971633911,
             "Bladder": 5.284291546558961e-06,
@@ -2207,7 +2207,7 @@
         },
         "predicted_label": "KidneyVessel"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00973650.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00973650.png": {
         "probabilities": {
             "Palm": 0.9999992847442627,
             "Foot": 4.5646834223589394e-07,
@@ -2253,7 +2253,7 @@
         },
         "predicted_label": "Palm"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00736463.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00736463.png": {
         "probabilities": {
             "AAV": 0.7055608034133911,
             "DDA": 0.285976380109787,
@@ -2299,7 +2299,7 @@
         },
         "predicted_label": "AAV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00755607.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00755607.png": {
         "probabilities": {
             "neg": 0.9538280963897705,
             "BPD": 0.043038491159677505,
@@ -2345,7 +2345,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00309795.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00309795.png": {
         "probabilities": {
             "Lip": 0.9999998807907104,
             "Palm": 6.656622986156435e-08,
@@ -2391,7 +2391,7 @@
         },
         "predicted_label": "Lip"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00095322.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00095322.png": {
         "probabilities": {
             "PAB": 0.9918837547302246,
             "LVOT": 0.006714507006108761,
@@ -2437,7 +2437,7 @@
         },
         "predicted_label": "PAB"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00135503.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00135503.png": {
         "probabilities": {
             "neg": 0.7841820120811462,
             "AAV": 0.20684091746807098,
@@ -2483,7 +2483,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00978340.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00978340.png": {
         "probabilities": {
             "4CH-H": 0.8839320540428162,
             "LVOT": 0.1124734953045845,
@@ -2529,7 +2529,7 @@
         },
         "predicted_label": "4CH-H"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00958754.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00958754.png": {
         "probabilities": {
             "Cereb": 0.9999958276748657,
             "BPD": 3.9935407585289795e-06,
@@ -2575,7 +2575,7 @@
         },
         "predicted_label": "Cereb"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00477470.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00477470.png": {
         "probabilities": {
             "SVSK": 0.9521942734718323,
             "neg": 0.04750743880867958,
@@ -2621,7 +2621,7 @@
         },
         "predicted_label": "SVSK"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00209033.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00209033.png": {
         "probabilities": {
             "Lip": 0.9999995231628418,
             "Palm": 2.7946472869189165e-07,
@@ -2667,7 +2667,7 @@
         },
         "predicted_label": "Lip"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00116196.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00116196.png": {
         "probabilities": {
             "neg": 0.9998295307159424,
             "Bladder": 0.00016153605247382075,
@@ -2713,7 +2713,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00884381.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00884381.png": {
         "probabilities": {
             "VaVp": 0.999998927116394,
             "neg": 8.201819241548947e-07,
@@ -2759,7 +2759,7 @@
         },
         "predicted_label": "VaVp"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00618278.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00618278.png": {
         "probabilities": {
             "Eye": 0.9999998807907104,
             "SideFace": 9.252794086478389e-08,
@@ -2805,7 +2805,7 @@
         },
         "predicted_label": "Eye"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00338135.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00338135.png": {
         "probabilities": {
             "neg": 1.0,
             "SVSK": 4.772568118482923e-09,
@@ -2851,7 +2851,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00754715.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00754715.png": {
         "probabilities": {
             "neg": 0.999998927116394,
             "BPD": 5.575536761170952e-07,
@@ -2897,7 +2897,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00009317.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00009317.png": {
         "probabilities": {
             "KidneyVessel": 0.9999189376831055,
             "neg": 6.861732981633395e-05,
@@ -2943,7 +2943,7 @@
         },
         "predicted_label": "KidneyVessel"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00385070.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00385070.png": {
         "probabilities": {
             "Leg": 0.9998910427093506,
             "Forearm": 0.00010863758507184684,
@@ -2989,7 +2989,7 @@
         },
         "predicted_label": "Leg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00657499.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00657499.png": {
         "probabilities": {
             "neg": 1.0,
             "AAV": 2.3529282966450182e-09,
@@ -3035,7 +3035,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00209983.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00209983.png": {
         "probabilities": {
             "neg": 0.9999116659164429,
             "AC": 3.8035985198803246e-05,
@@ -3081,7 +3081,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00282172.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00282172.png": {
         "probabilities": {
             "Foot": 1.0,
             "CRL": 3.026716433041088e-09,
@@ -3127,7 +3127,7 @@
         },
         "predicted_label": "Foot"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00794553.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00794553.png": {
         "probabilities": {
             "4CH": 1.0,
             "4CH-lightsplot": 1.651981840211647e-08,
@@ -3173,7 +3173,7 @@
         },
         "predicted_label": "4CH"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00937729.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00937729.png": {
         "probabilities": {
             "ABS": 0.9999958276748657,
             "Palate": 4.2242672861902975e-06,
@@ -3219,7 +3219,7 @@
         },
         "predicted_label": "ABS"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00429233.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00429233.png": {
         "probabilities": {
             "PAB": 0.9999878406524658,
             "LVOT": 7.243589152494678e-06,
@@ -3265,7 +3265,7 @@
         },
         "predicted_label": "PAB"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00130342.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00130342.png": {
         "probabilities": {
             "neg": 1.0,
             "SVSK": 7.568689008863316e-10,
@@ -3311,7 +3311,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00133144.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00133144.png": {
         "probabilities": {
             "SideFace": 0.9992194175720215,
             "ABS": 0.0003580927732400596,
@@ -3357,7 +3357,7 @@
         },
         "predicted_label": "SideFace"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00701837.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00701837.png": {
         "probabilities": {
             "Gallbladder": 0.9989303946495056,
             "neg": 0.0010004370706155896,
@@ -3403,7 +3403,7 @@
         },
         "predicted_label": "Gallbladder"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00312182.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00312182.png": {
         "probabilities": {
             "3DFace": 0.9999998807907104,
             "neg": 4.7651113277424884e-08,
@@ -3449,7 +3449,7 @@
         },
         "predicted_label": "3DFace"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00324565.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00324565.png": {
         "probabilities": {
             "4CH-H": 0.9999899864196777,
             "LVOT": 9.844718988460954e-06,
@@ -3495,7 +3495,7 @@
         },
         "predicted_label": "4CH-H"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00557271.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00557271.png": {
         "probabilities": {
             "neg": 1.0,
             "3DFace": 5.267786762352955e-10,
@@ -3541,7 +3541,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00271385.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00271385.png": {
         "probabilities": {
             "neg": 0.9999792575836182,
             "AC": 1.525431071058847e-05,
@@ -3587,7 +3587,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00852764.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00852764.png": {
         "probabilities": {
             "Palm": 0.9999804496765137,
             "Forearm": 1.935356340254657e-05,
@@ -3633,7 +3633,7 @@
         },
         "predicted_label": "Palm"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00979941.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00979941.png": {
         "probabilities": {
             "4CH": 0.7121814489364624,
             "neg": 0.2854272127151489,
@@ -3679,7 +3679,7 @@
         },
         "predicted_label": "4CH"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00767214.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00767214.png": {
         "probabilities": {
             "neg": 0.9999511241912842,
             "SVSK": 2.7208758183405735e-05,
@@ -3725,7 +3725,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00607325.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00607325.png": {
         "probabilities": {
             "Lip": 0.9999998807907104,
             "Palm": 1.0007137518641684e-07,
@@ -3771,7 +3771,7 @@
         },
         "predicted_label": "Lip"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00285582.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00285582.png": {
         "probabilities": {
             "PAB": 0.9972002506256104,
             "4CH-H": 0.0015439246781170368,
@@ -3817,7 +3817,7 @@
         },
         "predicted_label": "PAB"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00962827.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00962827.png": {
         "probabilities": {
             "neg": 1.0,
             "3DFace": 1.2327909526543834e-10,
@@ -3863,7 +3863,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00256976.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00256976.png": {
         "probabilities": {
             "Forearm": 0.9971574544906616,
             "Leg": 0.0024471606593579054,
@@ -3909,7 +3909,7 @@
         },
         "predicted_label": "Forearm"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00879842.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00879842.png": {
         "probabilities": {
             "Eye": 0.9999986886978149,
             "SideFace": 1.3577611071013962e-06,
@@ -3955,7 +3955,7 @@
         },
         "predicted_label": "Eye"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00547196.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00547196.png": {
         "probabilities": {
             "FL": 0.9999997615814209,
             "AC": 1.0579000786492543e-07,
@@ -4001,7 +4001,7 @@
         },
         "predicted_label": "FL"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00446315.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00446315.png": {
         "probabilities": {
             "4CH": 0.9996009469032288,
             "CTAR": 0.0003989250399172306,
@@ -4047,7 +4047,7 @@
         },
         "predicted_label": "4CH"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00164891.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00164891.png": {
         "probabilities": {
             "LVOT": 0.9990222454071045,
             "neg": 0.0009742260444909334,
@@ -4093,7 +4093,7 @@
         },
         "predicted_label": "LVOT"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00791839.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00791839.png": {
         "probabilities": {
             "neg": 0.9999841451644897,
             "DDA": 8.236204848799389e-06,
@@ -4139,7 +4139,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00577294.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00577294.png": {
         "probabilities": {
             "AAV": 0.9981482028961182,
             "DDA": 0.001185475499369204,
@@ -4185,7 +4185,7 @@
         },
         "predicted_label": "AAV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00076099.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00076099.png": {
         "probabilities": {
             "4CH": 0.9996015429496765,
             "4CH-H": 0.000344463944202289,
@@ -4231,7 +4231,7 @@
         },
         "predicted_label": "4CH"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00698867.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00698867.png": {
         "probabilities": {
             "Foot": 0.9999998807907104,
             "Forearm": 1.1823629364471344e-07,
@@ -4277,7 +4277,7 @@
         },
         "predicted_label": "Foot"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00476175.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00476175.png": {
         "probabilities": {
             "neg": 0.9799281358718872,
             "Bladder": 0.020067622885107994,
@@ -4323,7 +4323,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00864008.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00864008.png": {
         "probabilities": {
             "4CH-H": 0.9999833106994629,
             "LVOT": 1.2869355487055145e-05,
@@ -4369,7 +4369,7 @@
         },
         "predicted_label": "4CH-H"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00787615.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00787615.png": {
         "probabilities": {
             "PAB": 0.9999016523361206,
             "3VV": 8.627815986983478e-05,
@@ -4415,7 +4415,7 @@
         },
         "predicted_label": "PAB"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00336740.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00336740.png": {
         "probabilities": {
             "PAB": 0.914462149143219,
             "DDA": 0.055317413061857224,
@@ -4461,7 +4461,7 @@
         },
         "predicted_label": "PAB"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00095883.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00095883.png": {
         "probabilities": {
             "neg": 0.9983015060424805,
             "DDA": 0.0015845650341361761,
@@ -4507,7 +4507,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00374736.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00374736.png": {
         "probabilities": {
             "Spine": 0.9999998807907104,
             "SVSK": 8.109191185212694e-08,
@@ -4553,7 +4553,7 @@
         },
         "predicted_label": "Spine"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00934354.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00934354.png": {
         "probabilities": {
             "Eye": 1.0,
             "Palate": 2.2925089382397346e-08,
@@ -4599,7 +4599,7 @@
         },
         "predicted_label": "Eye"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00439136.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00439136.png": {
         "probabilities": {
             "3VV": 0.9999990463256836,
             "PAB": 8.389164918298775e-07,
@@ -4645,7 +4645,7 @@
         },
         "predicted_label": "3VV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00112823.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00112823.png": {
         "probabilities": {
             "3VV": 0.9999997615814209,
             "PAB": 1.6038001149354386e-07,
@@ -4691,7 +4691,7 @@
         },
         "predicted_label": "3VV"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00271727.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00271727.png": {
         "probabilities": {
             "LVOT": 0.9999938011169434,
             "4CH-H": 4.909272320219316e-06,
@@ -4737,7 +4737,7 @@
         },
         "predicted_label": "LVOT"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00479894.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00479894.png": {
         "probabilities": {
             "LVOT": 0.9998935461044312,
             "AAV": 6.869985372759402e-05,
@@ -4783,7 +4783,7 @@
         },
         "predicted_label": "LVOT"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00764940.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00764940.png": {
         "probabilities": {
             "neg": 1.0,
             "FL": 4.2398657917885885e-09,
@@ -4829,7 +4829,7 @@
         },
         "predicted_label": "neg"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00196929.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00196929.png": {
         "probabilities": {
             "3DFace": 0.9999998807907104,
             "neg": 3.0811381890316625e-08,
@@ -4875,7 +4875,7 @@
         },
         "predicted_label": "3DFace"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00855832.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00855832.png": {
         "probabilities": {
             "AC": 0.9999916553497314,
             "CTAR": 7.347001883317716e-06,
@@ -4921,7 +4921,7 @@
         },
         "predicted_label": "AC"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00521150.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00521150.png": {
         "probabilities": {
             "BPD": 1.0,
             "neg": 6.650795469909099e-09,
@@ -4967,7 +4967,7 @@
         },
         "predicted_label": "BPD"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00317070.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00317070.png": {
         "probabilities": {
             "Spine": 0.9999850988388062,
             "SVSK": 1.4436832316278014e-05,
@@ -5013,7 +5013,7 @@
         },
         "predicted_label": "Spine"
     },
-    "./test/PatientID704_ExamID10143_第二孕期/img/SoftLink_Img/00213239.png": {
+    "./test/sample_case_trimester2/img/SoftLink_Img/00213239.png": {
         "probabilities": {
             "Leg": 0.8949256539344788,
             "Forearm": 0.10503705590963364,

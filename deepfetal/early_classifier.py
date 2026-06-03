@@ -152,7 +152,7 @@ def batch_classify_images(input_folder, model_path,out_json, conf_threshold=0.5,
 def main(args):
     # input_folder = "./copied_reports_only_eval_224"
     input_folder = args.image_root
-    # output_folder = "./eval_hubeirenming_zhaoyun_classification_results_zhao"
+    # output_folder = "./eval_classification_results"
     # output_folder = args.early_cls["output_folder"]
     # model_path =  "./best.pt"
     model_path =  args.early_cls["model"]["weights_path"]
@@ -162,9 +162,4 @@ def main(args):
     batch_classify_images(input_folder, model_path, out_json, conf_threshold, class_conf_threshold)
 
 if __name__ == "__main__":
-    # Example usage
-    input_folder = "/home/ppq5umrb/whcs-share46/renming_classifify/copied_reports_only_eval_224"
-    output_folder = "/home/ppq5umrb/whcs-share46/renming_classifify/eval_hubeirenming_zhaoyun_classification_results_zhao"
-    model_path = "/home/ppq5umrb/whcs-share46/renming_classifify/best.pt"
-    
-    batch_classify_images(input_folder, output_folder, model_path)
+    raise SystemExit("Run this module through deepfetal.process.")

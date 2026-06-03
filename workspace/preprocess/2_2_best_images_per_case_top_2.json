@@ -1,0 +1,182 @@
+{
+  "sample_case_trimester2": {
+    "Leg": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00042533.png",
+        "probability": 0.9999994039535522
+      },
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00385070.png",
+        "probability": 0.9998910427093506
+      }
+    ],
+    "AAV": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00669567.png",
+        "probability": 0.9996838569641113
+      }
+    ],
+    "PAB": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00429233.png",
+        "probability": 0.9999878406524658
+      }
+    ],
+    "Forearm": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00256976.png",
+        "probability": 0.9971574544906616
+      }
+    ],
+    "Palm": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00973650.png",
+        "probability": 0.9999992847442627
+      }
+    ],
+    "Spine": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00374736.png",
+        "probability": 0.9999998807907104
+      }
+    ],
+    "Lip": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00309795.png",
+        "probability": 0.9999998807907104
+      }
+    ],
+    "Foot": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00275486.png",
+        "probability": 1.0
+      }
+    ],
+    "3DFace": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00312182.png",
+        "probability": 0.9999998807907104
+      }
+    ],
+    "Bladder": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00687187.png",
+        "probability": 0.9999979734420776
+      }
+    ],
+    "SideFace": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00828787.png",
+        "probability": 0.9999996423721313
+      }
+    ],
+    "3VV": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00112823.png",
+        "probability": 0.9999997615814209
+      }
+    ],
+    "Gallbladder": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00701837.png",
+        "probability": 0.9989303946495056
+      }
+    ],
+    "VaVp": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00884381.png",
+        "probability": 0.999998927116394
+      }
+    ],
+    "4CH": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00794553.png",
+        "probability": 1.0
+      }
+    ],
+    "Palate": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00502885.png",
+        "probability": 0.8141148090362549
+      }
+    ],
+    "LVOT": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00271727.png",
+        "probability": 0.9999938011169434
+      }
+    ],
+    "DDA": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00658171.png",
+        "probability": 0.9495061635971069
+      }
+    ],
+    "Kidney": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00090168.png",
+        "probability": 0.9558278322219849
+      }
+    ],
+    "HL": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00372515.png",
+        "probability": 0.9999998807907104
+      }
+    ],
+    "KidneyVessel": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00450991.png",
+        "probability": 0.9999943971633911
+      }
+    ],
+    "4CH-H": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00324565.png",
+        "probability": 0.9999899864196777
+      }
+    ],
+    "Cereb": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00958754.png",
+        "probability": 0.9999958276748657
+      }
+    ],
+    "SVSK": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00477470.png",
+        "probability": 0.9521942734718323
+      }
+    ],
+    "Eye": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00934354.png",
+        "probability": 1.0
+      }
+    ],
+    "ABS": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00937729.png",
+        "probability": 0.9999958276748657
+      }
+    ],
+    "FL": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00547196.png",
+        "probability": 0.9999997615814209
+      }
+    ],
+    "AC": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00855832.png",
+        "probability": 0.9999916553497314
+      }
+    ],
+    "BPD": [
+      {
+        "image_path": "./test/sample_case_trimester2/img/SoftLink_Img/00521150.png",
+        "probability": 1.0
+      }
+    ]
+  }
+}

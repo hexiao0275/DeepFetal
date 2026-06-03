@@ -1,1 +1,1 @@
-PatientID704_ExamID10143_第二孕期
+sample_case_trimester2

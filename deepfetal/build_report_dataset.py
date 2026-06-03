@@ -41,9 +41,9 @@ def main(args):
         prompt_list = DIAGNOSIS_PROMPTS_ZH if args.is_zh else DIAGNOSIS_PROMPTS_EN
 
     # -----------------------------
-    # Read filtered_best_images_hubeirenming.json
+    # Read filtered_best_images.json
     # -----------------------------
-    # with open('filtered_best_images_hubeirenming.json', 'r', encoding='utf-8') as f:
+    # with open('filtered_best_images.json', 'r', encoding='utf-8') as f:
     with open(args.merge["output_json"], 'r', encoding='utf-8') as f:
         json_data = json.load(f)
 

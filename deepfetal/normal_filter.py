@@ -142,7 +142,7 @@ def main(args):
     # === Save JSON ===
     export_results = {cid: dict(label_info) for cid, label_info in export_results.items()}
 
-    # with open("best_images_per_case_top_2_hubeirenming.json", "w", encoding="utf-8") as f:
+    # with open("best_images_per_case_top_2.json", "w", encoding="utf-8") as f:
     with open(args.normal_filter["out_json"], "w", encoding="utf-8") as f:
         json.dump(export_results, f, ensure_ascii=False, indent=2, default=convert_decimal)
 
@@ -184,4 +184,3 @@ def main(args):
             f.write(cid + "\n")
 
     print(f"📄 Missing case list saved to {OUT_MISSING}")
-
