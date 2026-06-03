@@ -19,8 +19,8 @@ from openai import OpenAI
 from tqdm import tqdm
 
 # ====== Environment configuration ======
-os.environ["OPENAI_API_KEY"] = "sk-MjjB7iGC6v4MXoJveSg4F0EIB9Fyo1NYZxy7CExrg3f8si49"
-os.environ["OPENAI_BASE_URL"] = "https://api.tu-zi.com/v1"
+os.environ["OPENAI_API_KEY"] = "sk-XXXXX"
+os.environ["OPENAI_BASE_URL"] = "https://XXXX/v1"
 # ========= Core configuration =========
 MODEL = "gpt-5.2"
 TEST_COUNT = None
