@@ -14,11 +14,37 @@ from .plane_texts import (
     REPORT_PROMPTS_ZH,
 )
 
+
+def load_patient_info(patient_info_path):
+    """Load patient information Excel and return a dict keyed by patient name."""
+    if not patient_info_path or not os.path.exists(patient_info_path):
+        return {}
+    df = pd.read_excel(patient_info_path)
+    name_col = df.columns[0]
+    info_dict = {}
+    for _, row in df.iterrows():
+        name = str(row[name_col]).strip()
+        info = {}
+        if "checklist" in df.columns:
+            val = row.get("checklist")
+            if pd.notna(val):
+                info["checklist"] = str(val).strip()
+        if "type" in df.columns:
+            val = row.get("type")
+            if pd.notna(val):
+                info["type"] = str(val).strip()
+        if "agent API结果" in df.columns:
+            val = row.get("agent API结果")
+            if pd.notna(val):
+                info["agent_api_result"] = str(val).strip()
+        info_dict[name] = info
+    return info_dict
+
+
 def main(args):
     # -----------------------------
     # Read Excel to obtain report text
     # -----------------------------
-    # excel_path = "孕周提取完整结果_gpt_results_only_eval_with_stage.xlsx"
     excel_path = args.excel_path
     df_excel = pd.read_excel(excel_path)
 
@@ -32,7 +58,6 @@ def main(args):
         for _, row in df_excel.iterrows()
     }
 
-
     label_mapping = LABEL_MAPPING_ZH if args.is_zh else LABEL_MAPPING_EN
 
     if args.infer_task_is_report:
@@ -41,15 +66,19 @@ def main(args):
         prompt_list = DIAGNOSIS_PROMPTS_ZH if args.is_zh else DIAGNOSIS_PROMPTS_EN
 
     # -----------------------------
-    # Read filtered_best_images.json
+    # Load patient info (checklist, type, agent API result)
     # -----------------------------
-    # with open('filtered_best_images.json', 'r', encoding='utf-8') as f:
+    patient_info_path = getattr(args, "patient_info_path", None)
+    patient_info = load_patient_info(patient_info_path)
+    original_case_name = getattr(args, "original_case_name", "")
+
+    # -----------------------------
+    # Read filtered_best_images_hubeirenming.json
+    # -----------------------------
     with open(args.merge["output_json"], 'r', encoding='utf-8') as f:
         json_data = json.load(f)
 
     output = []
-
-    missing_report_cases = []
 
     # -----------------------------
     # Process each case
@@ -58,14 +87,12 @@ def main(args):
 
         # -----------------------------
         # Extract patient ID and exam ID from case_id
-        # Example format: PatientID223731_ExamID674172_trimester2
         # -----------------------------
         m = re.search(r"PatientID(\d+)_ExamID(\d+)", case_id)
-        if not m:
-            print(f"Unable to parse ID: {case_id}")
-            continue
-
-        patient_id, exam_id = m.group(1), m.group(2)
+        if m:
+            patient_id, exam_id = m.group(1), m.group(2)
+        else:
+            patient_id, exam_id = case_id, case_id
 
         # -----------------------------
         # Get report text from Excel
@@ -83,13 +110,25 @@ def main(args):
             plane_label = label_mapping.get(label, label)
             image_description += f"{i+1}. {plane_label}\n<image>\n"
 
+        # Build prompt with optional checklist and API result
+        prompt_text = random.choice(prompt_list)
+
+        info = patient_info.get(original_case_name, {})
+        checklist = info.get("checklist", "")
+        agent_api_result = info.get("agent_api_result", "")
+
+        if checklist:
+            prompt_text += f"\nSome examination items include: {checklist}"
+        if agent_api_result:
+            prompt_text += f"\n\nThe following are the relevant imaging descriptions for this case, provided for reference: {agent_api_result}"
+
         entry = {
             "id": case_id,
             "image": image_paths,
             "conversations": [
                 {
                     "from": "human",
-                    "content": image_description + random.choice(prompt_list)
+                    "content": image_description + prompt_text
                 },
                 {
                     "from": "gpt",

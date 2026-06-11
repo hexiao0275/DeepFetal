@@ -377,10 +377,26 @@ def main(args):
     args.input = args.report["out_json"]
     args.excel = args.convert["en_excel"]
     args.output = args.convert["out_json"]
-    args.visit_type = "Screening" if  args.visit_type_is_screening else "Clinical"
-    args.task = "TASK_ULTRASOUND_REPORT" if args.infer_task_is_report else "TASK_ULTRASOUND_DIAGNOSIS"
     args.debug_term = None
+
+    # Determine visit type: prefer patient_info type if available
     visit_type = "Screening" if args.visit_type_is_screening else "Clinical"
+    patient_info_path = getattr(args, "patient_info_path", None)
+    original_case_name = getattr(args, "original_case_name", "")
+    if patient_info_path and original_case_name:
+        try:
+            import pandas as _pd
+            _df = _pd.read_excel(patient_info_path)
+            _name_col = _df.columns[0]
+            for _, _row in _df.iterrows():
+                if str(_row[_name_col]).strip() == original_case_name:
+                    _type_val = str(_row.get("type", "")).strip()
+                    if _type_val.startswith("<") and _type_val.endswith(">"):
+                        visit_type = _type_val[1:-1]
+                    break
+        except Exception:
+            pass
+
     global TASK_PREFIX
     TASK_PREFIX = f"<{visit_type}> <TASK_ULTRASOUND_REPORT> <LEN_LONG> <{args.center}>" if args.infer_task_is_report else f"<{visit_type}> <TASK_ULTRASOUND_DIAGNOSIS> <LEN_SHORT>"
     if args.debug_term:

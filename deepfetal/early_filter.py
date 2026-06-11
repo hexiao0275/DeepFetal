@@ -59,6 +59,7 @@ def extract_case_id(image_path):
     Target format example:
       PatientID445682_ExamID1281825_trimester3_FieldID10373
     Compatible with ".../PatientID...FieldIDxxxx/..." path structures.
+    Falls back to parent directory name for generic paths.
     """
     image_path = image_path.replace("\\", "/")
     # Try strict FieldID matching first
@@ -69,7 +70,8 @@ def extract_case_id(image_path):
     m2 = re.search(r'(PatientID\d+_ExamID\d+_[^/]+)', image_path)
     if m2:
         return m2.group(1)
-    return None
+    # Generic fallback: use parent directory name
+    return os.path.basename(os.path.dirname(image_path))
 
 # ============== Build all_confidences from top5 (fallback) ==============
 def build_probs_from_top5(top5):
@@ -97,9 +99,9 @@ def main(args):
     max_total_per_case = args.early_filter["common"]["max_total_per_case"]
 
     # IN_PATH = "eval_multi_model_parallel/classification_results.json"
-    # IN_PATH = "eval_classification_results/classification_results.json"
+    # IN_PATH = "eval_hubeirenming_zhaoyun_classification_results_zhao/classification_results.json"
     IN_PATH = os.path.join(args.early_cls["output_folder"], args.early_cls["out_json"])
-    # OUT_JSON = "best_images_per_case_top_2.json"
+    # OUT_JSON = "best_images_per_case_top_2_hubeirenming_zhao.json"
     OUT_JSON = args.early_filter["out_json"]
     # OUT_CASE_IDS = "case_ids_zhao.txt"
     OUT_CASE_IDS = args.early_filter["out_case_ids"]

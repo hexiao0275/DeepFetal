@@ -65,8 +65,10 @@ def main(args):
 
     # === Extract case ID ===
     def extract_case_id(image_path):
-        match = re.search(r'(PatientID\d+_ExamID\d+_.*?)(?=/)', image_path)
-        return match.group(1) if match else None
+        match = re.search(r'(PatientID\d+_ExamID\d+)', image_path)
+        if match:
+            return match.group(1)
+        return os.path.basename(os.path.dirname(image_path))
 
 
     # === Main flow: stream parse and select ===
@@ -93,7 +95,7 @@ def main(args):
         valid_labels = [
             (label, prob)
             for label, prob in probabilities.items()
-            if label != "neg" and isinstance(prob, (float, int)) and prob > threshold and prob > neg_prob
+            if label != "neg" and isinstance(prob, (float, int)) and prob > threshold
         ]
 
         if not valid_labels:
@@ -142,7 +144,7 @@ def main(args):
     # === Save JSON ===
     export_results = {cid: dict(label_info) for cid, label_info in export_results.items()}
 
-    # with open("best_images_per_case_top_2.json", "w", encoding="utf-8") as f:
+    # with open("best_images_per_case_top_2_hubeirenming.json", "w", encoding="utf-8") as f:
     with open(args.normal_filter["out_json"], "w", encoding="utf-8") as f:
         json.dump(export_results, f, ensure_ascii=False, indent=2, default=convert_decimal)
 
@@ -154,7 +156,10 @@ def main(args):
         sum(len(v) for v in label_info.values())
         for label_info in export_results.values()
     ]
-    print("Average images per case:", sum(selected_counts) / len(selected_counts))
+    if selected_counts:
+        print("Average images per case:", sum(selected_counts) / len(selected_counts))
+    else:
+        print("Warning: No images selected")
 
 
     # === Write case IDs ===
@@ -184,3 +189,4 @@ def main(args):
             f.write(cid + "\n")
 
     print(f"📄 Missing case list saved to {OUT_MISSING}")
+

@@ -97,11 +97,19 @@ def normal_process(args):
     set_up_script(args, "report")
 
 
+def _normalize_case_name(case_name: str) -> str:
+    """Ensure directory name matches PatientID*_ExamID* format.
+    If it doesn't, synthesize one from the name (e.g. patient_1 -> PatientID1_ExamID1)."""
+    case_re = re.compile(r"PatientID\d+_ExamID\d+")
+    if case_re.search(case_name):
+        return case_name
+    digits = re.findall(r"\d+", case_name)
+    num = digits[0] if digits else "0"
+    return f"PatientID{num}_ExamID{num}"
+
+
 def handle_singleton(case_dir, excel_path, tem_early, tem_normal):
     case_name = os.path.basename(case_dir.rstrip("/"))
-    case_re = re.compile(r"PatientID\d+_ExamID\d+")
-    if not case_re.search(case_name):
-        raise ValueError(f"{case_dir} is not a valid case folder")
 
     is_early = get_is_early_from_excel(case_dir, excel_path)
     dst_root = tem_early if is_early else tem_normal
@@ -127,6 +135,7 @@ def main(args):
     if args.batch_prediction:
         raise ValueError("Only single-case inference is supported.")
 
+    args.original_case_name = os.path.basename(args.image_root.rstrip("/"))
     src_root, dst_root, _ = handle_singleton(args.image_root, args.excel_path, tem_early, tem_normal)
     args.root_mapping = [src_root, dst_root]
 
@@ -153,7 +162,7 @@ def build_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-name", default=None, help="Override run.name")
     parser.add_argument("--workspace_dir", default=DEFAULT_WORKSPACE_DIR, help="Workspace directory for intermediate outputs")
-    parser.add_argument("--image_root", default="./data/samples/sample_case_trimester2", help="Case folder path")
+    parser.add_argument("--image_root", default="./data/samples/PatientID704_ExamID10143_trimester2", help="Case folder path")
     parser.add_argument("--config_path", default="./config/config.yaml", help="")
     parser.add_argument("--batch_prediction", action="store_true", help="Batch mode is not supported.")
     parser.add_argument("--excel_path", default="./data/metadata/pregnancy_stage.xlsx", help="Excel path used to determine early pregnancy")
@@ -191,6 +200,12 @@ def build_parser():
         choices=[0, 1],
         default=1,
         help="Deprecated alias of --use_openai_constraint. 1 enables the optional API constraint step, 0 skips it.",
+    )
+    parser.add_argument(
+        "--patient_info_path",
+        type=str,
+        default=None,
+        help="Path to patient information Excel (with checklist, type, and optionally agent API results).",
     )
     return parser
 

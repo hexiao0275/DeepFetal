@@ -53,10 +53,10 @@ if [ -n "$env_file" ]; then
 fi
 
 mode="${MODE:-all}"
-infer_backend="${INFER_BACKEND:-swift}"
+infer_backend="${INFER_BACKEND:-api}"
 
 workspace_dir="${WORKSPACE_DIR:-./workspace}"
-image_root="${IMAGE_ROOT:-./data/samples/sample_case_trimester2}"
+image_root="${IMAGE_ROOT:-./data/samples/PatientID704_ExamID10143_trimester2}"
 config_path="${CONFIG_PATH:-./config/config.yaml}"
 excel_path="${EXCEL_PATH:-./data/metadata/pregnancy_stage.xlsx}"
 input_jsonl="${INPUT_JSONL:-$workspace_dir/infer/ultrasound_prompt_result.jsonl}"
@@ -64,8 +64,9 @@ input_jsonl="${INPUT_JSONL:-$workspace_dir/infer/ultrasound_prompt_result.jsonl}
 visit_type_is_screening="${VISIT_TYPE_IS_SCREENING:-1}"
 infer_task_is_report="${INFER_TASK_IS_REPORT:-1}"
 center="${CENTER:-CENTER_1_RED_HOUSE}"
-is_zh="${IS_ZH:-1}"
-use_openai_constraint="${USE_OPENAI_CONSTRAINT:-${USE_IMAGE_PROMPT:-1}}"
+is_zh="${IS_ZH:-0}"
+use_openai_constraint="${USE_OPENAI_CONSTRAINT:-${USE_IMAGE_PROMPT:-0}}"
+patient_info_path="${PATIENT_INFO_PATH:-./data/metadata/select_patient_information.xlsx}"
 
 resolve_python_bin() {
   if [ -n "${PYTHON_BIN:-}" ]; then
@@ -152,46 +153,80 @@ run_process() {
       --infer_task_is_report "$infer_task_is_report" \
       --is_zh "$is_zh" \
       --use_openai_constraint "$use_openai_constraint" \
-      --use_image_prompt "$use_openai_constraint"
+      --use_image_prompt "$use_openai_constraint" \
+      --patient_info_path "$patient_info_path"
 }
 
 run_infer() {
   mkdir -p "$workspace_dir/infer"
 
-  model_dir="${MODEL_DIR:-./checkpoints/checkpoint-600-merged}"
-  output_path="${OUTPUT_PATH:-$workspace_dir/infer/final_result.jsonl}"
+  if [ "$infer_backend" = "swift" ]; then
+    if [ "$use_openai_constraint" -eq 1 ]; then
+      model_dir="${MODEL_DIR:-./checkpoints/checkpoint-600-merged}"
+    else
+      model_dir="${MODEL_DIR:-./checkpoints/checkpoint-2450-merged}"
+    fi
 
-  export NCCL_P2P_DISABLE=1
-  export NCCL_IB_DISABLE=1
-  export SWIFT_PATCH_CONV3D=1
+    output_path="${OUTPUT_PATH:-$workspace_dir/infer/final_result.jsonl}"
 
-  CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}" swift infer \
-    --model "$model_dir" \
-    --model_type qwen3_vl \
-    --infer_backend transformers \
-    --temperature 0 \
-    --max_new_tokens 2048 \
-    --result_path "$output_path" \
-    --val_dataset "$input_jsonl"
+    export NCCL_P2P_DISABLE=1
+    export NCCL_IB_DISABLE=1
+    export SWIFT_PATCH_CONV3D=1
+
+    CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}" swift infer \
+      --model "$model_dir" \
+      --model_type qwen3_vl \
+      --infer_backend transformers \
+      --attn_impl sdpa \
+      --temperature 0 \
+      --max_new_tokens 2048 \
+      --result_path "$output_path" \
+      --val_dataset "$input_jsonl"
+    return
+  fi
+
+  if [ "$infer_backend" = "api" ]; then
+    output_path="${OUTPUT_PATH:-$workspace_dir/infer/final_result_api.jsonl}"
+    if [ -z "${OPENAI_API_KEY:-}" ]; then
+      echo "Missing OPENAI_API_KEY. Set it in .env.local / .env, or export it in the shell."
+      exit 1
+    fi
+    ensure_python_module openai openai
+    cmd=(
+      "$python_bin" -m deepfetal.api_infer
+      --input "$input_jsonl"
+      --output "$output_path"
+      --model "${OPENAI_MODEL:-gpt-4.1-mini}"
+    )
+    if [ -n "${OPENAI_BASE_URL:-}" ]; then
+      cmd+=(--base-url "$OPENAI_BASE_URL")
+    fi
+    if [ -n "${OPENAI_API_KEY:-}" ]; then
+      cmd+=(--api-key "$OPENAI_API_KEY")
+    fi
+    "${cmd[@]}"
+    return
+  fi
+
+  echo "Unsupported INFER_BACKEND: $infer_backend"
+  echo "Available values: swift | api"
+  exit 1
 }
 
-if [ "$mode" != "all" ]; then
-  echo "Unsupported MODE: $mode"
-  echo "This runner only supports MODE=all."
-  exit 1
-fi
-
-if [ "$infer_backend" != "swift" ]; then
-  echo "Unsupported INFER_BACKEND: $infer_backend"
-  echo "This runner only supports INFER_BACKEND=swift."
-  exit 1
-fi
-
-if [ "$use_openai_constraint" != "1" ]; then
-  echo "Unsupported USE_OPENAI_CONSTRAINT: $use_openai_constraint"
-  echo "This runner only supports USE_OPENAI_CONSTRAINT=1."
-  exit 1
-fi
-
-run_process
-run_infer
+case "$mode" in
+  process)
+    run_process
+    ;;
+  infer)
+    run_infer
+    ;;
+  all)
+    run_process
+    run_infer
+    ;;
+  *)
+    echo "Unsupported MODE: $mode"
+    echo "Available values: process | infer | all"
+    exit 1
+    ;;
+esac
