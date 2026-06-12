@@ -1,128 +1,156 @@
 # A Deconfounded Multimodal AI System for Fetal Ultrasound Interpretation
 
- [Website](http://deepfetal.com/)  | [ Model](https://huggingface.co/natureteam/DeepFetal)
+ [Website](http://deepfetal.com/)  | [Model](https://huggingface.co/Heedgood/DeepFetal)
 
-> *DeepFetal is an deconfounded multimodal AI system for full-gestation fetal ultrasound interpretation, enabling traceable diagnostic reasoning and robust clinical decision support.*
+> *DeepFetal is a deconfounded multimodal AI system for full-gestation fetal ultrasound interpretation, enabling traceable diagnostic reasoning and robust clinical decision support.*
+
+For more details about our pipeline, please refer to our paper.
 
 
-For more detailed about our pipeline, please refer to our paper.
+## Installation
 
-
-# Installation
-
-This document provides a concise setup guide for running `deepfetal_code` for preprocessing and inference.
-
-## Step 1: Clone the Repository
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/hexiao0275/DeepFetal.git
 cd DeepFetal
 ```
 
-## Step 2: Create the Python Environment and Install Dependencies
+### Step 2: Create the Python Environment
 
 We recommend using Conda with Python 3.10.
 
 ```bash
 conda create -n deepfetal python=3.10 -y
 conda activate deepfetal
+```
+
+### Step 3: Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Step 3: Prepare Required Files
-
-Make sure the following directories and files are available:
+### Step 4: Prepare Required Files
 
 ```text
-deepfetal_code/
+DeepFetal/
 ├── run.sh
 ├── deepfetal/
 ├── config/
 │   └── config.yaml
 ├── data/
 │   ├── metadata/
+│   │   ├── pregnancy_stage.xlsx
+│   │   ├── plane_translation.xlsx
+│   │   └── select_patient_information.xlsx
 │   └── samples/
+│       ├── patient_1/
+│       ├── patient_2/
+│       └── ...
 ├── checkpoints/
+│   ├── 1_1/best.pt
+│   ├── 1_2/41cls_model_117.pth
+│   └── checkpoint-600-merged/    
 └── workspace/
 ```
 
-Required assets:
+### Step 5: Configure Environment Variables
 
-- `data/metadata/pregnancy_stage.xlsx`
-- `data/metadata/plane_translation.xlsx`
-- your input ultrasound case folder under `data/samples/` or another custom path
-- model checkpoints under `checkpoints/`
-
-## Step 4: Configure Environment Variables
-
-Create a local environment file named `.env.local` in the project root.
-
-Example configuration:
+Create `.env.local` in the project root:
 
 ```bash
-OPENAI_API_KEY=your_api_key
-OPENAI_BASE_URL=https://api.openai.com/v1
-OPENAI_MODEL=gpt-4.1-mini
+PYTHON_BIN=./venv/bin/python
 
 MODE=all
 INFER_BACKEND=swift
-USE_OPENAI_CONSTRAINT=1
+INFER_TASK_IS_REPORT=2
+USE_OPENAI_CONSTRAINT=0
+
+# Only needed when INFER_BACKEND=api
+# OPENAI_API_KEY=your_api_key
+# OPENAI_BASE_URL=https://api.openai.com/v1
+# OPENAI_MODEL=gpt-4.1-mini
 ```
 
-Notes:
+Key variables:
 
-- `INFER_BACKEND=swift` uses a local model from `checkpoints/`.
-- `USE_OPENAI_CONSTRAINT=1` enables the optional image-constraint generation step before final inference.
+| Variable | Values | Description |
+|----------|--------|-------------|
+| `MODE` | `all`, `process`, `infer`| Pipeline mode |
+| `INFER_BACKEND` | `swift`, `api` | `swift` for local GPU inference, `api` for OpenAI-compatible API |
+| `INFER_TASK_IS_REPORT` | `0`, `1`, `2` | `0` = diagnosis only, `1` = report only, `2` = both |
+| `USE_OPENAI_CONSTRAINT` | `0`, `1` | Enable image-constraint generation step before inference |
+| `IMAGE_ROOT` | path | Input case folder (single case) or parent folder (batch mode) |
+| `WORKSPACE_DIR` | path | Output workspace directory |
+| `CUDA_VISIBLE_DEVICES` | `0`, `0,1`, ... | GPU selection for swift backend |
 
-## Step 5: Run the Pipeline
+
+## Usage
+
+### Single Case: Report + Diagnosis
 
 ```bash
-conda activate deepfetal
-USE_OPENAI_CONSTRAINT=1 \
-MODE=all \
+IMAGE_ROOT=./data/samples/patient_1 \
+INFER_TASK_IS_REPORT=2 \
 INFER_BACKEND=swift \
+MODE=all \
 bash run.sh
 ```
 
-## Step 6: Expected Outputs
+### Single Task Modes
 
-Main intermediate and output files:
+```bash
+# Report generation only
+INFER_TASK_IS_REPORT=1 MODE=all bash run.sh
+
+# Diagnosis generation only
+INFER_TASK_IS_REPORT=0 MODE=all bash run.sh
+
+# Preprocess only (no inference)
+MODE=process bash run.sh
+
+# Inference only (assumes preprocessing is done)
+MODE=infer bash run.sh
+```
+
+
+## Output Structure
+
+### Single case (`MODE=all`)
 
 ```text
 workspace/
-├── preprocess/
-│   └── 5_1_ultrasound_reports_convert.jsonl
+├── preprocess/                           (intermediate files)
 └── infer/
-    ├── ultrasound_prompt_result.jsonl
-    └── final_result.jsonl
+    ├── ultrasound_prompt_result.jsonl    (when INFER_TASK_IS_REPORT=0 or 1)
+    ├── ultrasound_prompt_report.jsonl    (when INFER_TASK_IS_REPORT=2)
+    ├── ultrasound_prompt_diagnosis.jsonl (when INFER_TASK_IS_REPORT=2)
+    ├── final_result.jsonl               (swift output, single task)
+    ├── final_result_report.jsonl        (swift output, report)
+    └── final_result_diagnosis.jsonl     (swift output, diagnosis)
 ```
 
-Output description:
 
-- `workspace/infer/ultrasound_prompt_result.jsonl`: prompt file used for the second-stage inference
-- `workspace/infer/final_result.jsonl`: final output from the local Swift backend
 
-## Step 7: Common Options
+### Output Format
 
-You can override the default paths with environment variables:
+Each line in `final_result_*.jsonl` is a JSON object containing the model's response:
 
-```bash
-IMAGE_ROOT=./data/samples/sample_case_trimester2
-WORKSPACE_DIR=./workspace
-CONFIG_PATH=./config/config.yaml
-EXCEL_PATH=./data/metadata/pregnancy_stage.xlsx
-```
+**Report** (`TASK_ULTRASOUND_REPORT`): Full structured ultrasound report with FINDINGS and IMPRESSION sections, including fetal measurements, anatomical observations, and clinical assessment.
 
-Example:
+**Diagnosis** (`TASK_ULTRASOUND_DIAGNOSIS`): Concise diagnostic impression summarizing key findings and abnormalities.
 
-```bash
-IMAGE_ROOT=./data/samples/your_case \
-USE_OPENAI_CONSTRAINT=1 \
-INFER_BACKEND=swift \
-MODE=all \
-bash run.sh
-```
+
+## Model Weights
+
+| Path | Size | Description |
+|------|------|-------------|
+| `checkpoints/1_1/best.pt` | 3.1M | Quality detection/filtering model |
+| `checkpoints/1_2/41cls_model_117.pth` | 107M | 41-class fetal ultrasound plane classifier |
+| `checkpoints/checkpoint-600-merged/` | 17G | Qwen3-VL multimodal model (bfloat16, 36 layers) |
 
 
 ## Acknowledgement
+
 We thank all the collaborators who supported the development and evaluation of DeepFetal. We also acknowledge the open-source community and prior research in medical imaging, multimodal learning, and large language models, which provided important foundations for this work.
