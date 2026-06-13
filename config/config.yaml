@@ -2,7 +2,7 @@ early_cls:
   script: "deepfetal.early_classifier"
 #  device: { use_cuda: true, gpu_id: 0 }
   model:
-    weights_path: "./checkpoints/1_1/best.pt"
+    weights_path: "./checkpoints/1_1/1_cls_model.pt"
     conf_threshold: 0.5
     class_conf_threshold: 0.85
   out_json: "./workspace/preprocess/1_1_classification_results.json"
