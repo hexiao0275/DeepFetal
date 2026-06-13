@@ -154,7 +154,7 @@ def main(args):
     input_folder = args.image_root
     # output_folder = "./eval_classification_results"
     # output_folder = args.early_cls["output_folder"]
-    # model_path =  "./best.pt"
+    # model_path =  "./1_cls_model.pt"
     model_path =  args.early_cls["model"]["weights_path"]
     conf_threshold = args.early_cls["model"]["conf_threshold"]
     class_conf_threshold = args.early_cls["model"]["class_conf_threshold"]
