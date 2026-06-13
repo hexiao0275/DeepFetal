@@ -80,7 +80,7 @@ def main(args):
     ])
 
     model = convnext_tiny(num_classes=num_classes).to(device)
-    # weights_path = "./weights/41cls_model_117.pth"
+    # weights_path = "./weights/2_3_cls_model.pth"
     weights_path = args.normal_cls["model"]["weights_path"]
     model.load_state_dict(torch.load(weights_path, map_location=device))
     model.eval()
