@@ -51,7 +51,7 @@ DeepFetal/
 ├── checkpoints/
 │   ├── 1_1/best.pt
 │   ├── 1_2/41cls_model_117.pth
-│   └── checkpoint-600-merged/    
+│   └── checkpoint-merged/    
 └── workspace/
 ```
 
@@ -70,7 +70,7 @@ USE_OPENAI_CONSTRAINT=0
 # Only needed when INFER_BACKEND=api
 # OPENAI_API_KEY=your_api_key
 # OPENAI_BASE_URL=https://api.openai.com/v1
-# OPENAI_MODEL=gpt-4.1-mini
+# OPENAI_MODEL=gpt-5.2
 ```
 
 Key variables:
