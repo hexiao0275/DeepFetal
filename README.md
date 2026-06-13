@@ -50,7 +50,7 @@ DeepFetal/
 │       └── ...
 ├── checkpoints/
 │   ├── 1_1/best.pt
-│   ├── 1_2/41cls_model_117.pth
+│   ├── 1_2/2_3_cls_model.pth
 │   └── checkpoint-merged/    
 └── workspace/
 ```
@@ -147,8 +147,8 @@ Each line in `final_result_*.jsonl` is a JSON object containing the model's resp
 | Path | Size | Description |
 |------|------|-------------|
 | `checkpoints/1_1/best.pt` | 3.1M | Quality detection/filtering model |
-| `checkpoints/1_2/41cls_model_117.pth` | 107M | 41-class fetal ultrasound plane classifier |
-| `checkpoints/checkpoint-600-merged/` | 17G | Qwen3-VL multimodal model (bfloat16, 36 layers) |
+| `checkpoints/1_2/2_3_cls_model.pth` | 107M | 2_3-trimester-class fetal ultrasound plane classifier |
+| `checkpoints/checkpoint-600-merged/` | 17G | multimodal model (36 layers) |
 
 
 ## Acknowledgement
