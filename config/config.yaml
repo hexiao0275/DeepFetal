@@ -11,7 +11,7 @@ normal_cls:
   script: "deepfetal.normal_classifier"
   model:
     num_classes: 41
-    weights_path: "./checkpoints/1_2/41cls_model_117.pth"
+    weights_path: "./checkpoints/1_2/2_3_cls_model.pth"
     class_indices_path: "./checkpoints/1_2/class_indices_41.json"
   dataloader: { img_size: 224, batch_size: 1, num_workers: 4 }
   out_json: "./workspace/preprocess/1_2_classification_results_with_probabilities_224_eval.json"
