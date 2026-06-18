@@ -45,8 +45,8 @@ DeepFetal/
 │   │   └── plane_translation.xlsx
 │   └── samples/
 │       ├── clinical_information.xlsx    (optional)
-│       ├── patient_1/
-│       ├── patient_2/
+│       ├── patient_1_inpatient/
+│       ├── patient_2_inpatient/
 │       └── ...
 ├── checkpoints/
 │   ├── 1_1/1_cls_model.pt
@@ -55,7 +55,7 @@ DeepFetal/
 └── workspace/
 ```
 
-`clinical_information.xlsx` is optional. If an `.xlsx` file exists under the case folder or under `data/samples/`, the pipeline will look for a row that exactly matches the case folder name and read its `checklist` value.
+`clinical_information.xlsx` is optional. If an `.xlsx` file exists under the case folder or under `data/samples/`, the pipeline will look for a row that exactly matches the case folder name and read its `checklist` value. In older sample naming, `inpatient` indicates an inpatient visit; for screening visits, use the outpatient/screening visit setting.
 
 ### Step 5: Configure Environment Variables
 
@@ -77,7 +77,7 @@ Key variables:
 |----------|--------|-------------|
 | `MODE` | `all`, `process`, `infer`| Pipeline mode |
 | `IS_EARLY` | `0`, `1` | `0` = second- and third-trimester pipeline, `1` = first-trimester pipeline |
-| `VISIT_TYPE_IS_SCREENING` | `0`, `1` | `0` = clinical visit, `1` = screening visit |
+| `VISIT_TYPE_IS_SCREENING` | `0`, `1` | `0` = inpatient/clinical visit, `1` = outpatient/screening visit |
 | `INFER_TASK_IS_REPORT` | `0`, `1`| `0` = diagnosis only, `1` = report only|
 | `OPENAI_API_KEY` | string | API key for the required semantic agent module |
 | `OPENAI_BASE_URL` | URL | OpenAI-compatible API endpoint for the semantic agent module |
@@ -92,7 +92,7 @@ Key variables:
 ### Single Case: Diagnosis
 
 ```bash
-IMAGE_ROOT=./data/samples/patient_1_clinical \
+IMAGE_ROOT=./data/samples/patient_1_inpatient \
 IS_EARLY=0 \
 VISIT_TYPE_IS_SCREENING=0 \
 INFER_TASK_IS_REPORT=0 \
@@ -104,7 +104,7 @@ bash run.sh
 ### Single Case: Report
 
 ```bash
-IMAGE_ROOT=./data/samples/patient_1_clinical \
+IMAGE_ROOT=./data/samples/patient_1_inpatient \
 IS_EARLY=0 \
 VISIT_TYPE_IS_SCREENING=0 \
 INFER_TASK_IS_REPORT=1 \
