@@ -1,0 +1,36 @@
+# Core project dependencies
+ijson
+numpy
+openai
+openpyxl
+opencv-python
+pandas
+pillow
+PyYAML
+tqdm
+
+# PyTorch / vision stack
+torch==2.9.1
+torchaudio==2.9.1
+torchvision==0.24.1
+
+# ms-swift inference stack
+accelerate==1.12.0
+datasets==3.6.0
+huggingface_hub==1.11.0
+modelscope==1.34.0
+peft==0.18.1
+qwen-vl-utils==0.0.14
+safetensors==0.7.0
+tokenizers==0.22.2
+transformers==5.5.4
+transformers-stream-generator==0.0.5
+trl==0.24.0
+
+# Installed in msswift1 from the ms-swift repository.
+git+https://github.com/modelscope/ms-swift.git@09974ef9ac6053f52ce5767a3f9b9dfe5648f1a3#egg=ms_swift
+
+# Optional acceleration packages present in msswift1.
+bitsandbytes==0.49.2
+vllm==0.15.1
+xformers==0.0.32.post1

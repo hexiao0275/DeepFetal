@@ -1,0 +1,46 @@
+[
+  {
+    "id": "sample_case_trimester2",
+    "image": [
+      "./test/sample_case_trimester2/img/SoftLink_Img/00042533.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00669567.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00429233.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00256976.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00973650.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00374736.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00309795.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00275486.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00312182.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00687187.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00828787.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00112823.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00701837.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00884381.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00794553.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00502885.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00271727.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00658171.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00090168.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00372515.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00450991.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00324565.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00958754.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00477470.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00934354.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00937729.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00547196.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00855832.png",
+      "./test/sample_case_trimester2/img/SoftLink_Img/00521150.png"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "content": "1. 胫腓骨长轴切面\n<image>\n2. 主动脉弓切面\n<image>\n3. 肺动脉分叉\n<image>\n4. 尺挠骨切面\n<image>\n5. 手指冠状切面\n<image>\n6. 脊柱纵切面\n<image>\n7. 唇部冠状切面\n<image>\n8. 足冠状切面\n<image>\n9. 3D彩超\n<image>\n10. 腹壁经膀胱横切面\n<image>\n11. 颜面部正中矢状切面\n<image>\n12. 三血管切面\n<image>\n13. 胆囊切面\n<image>\n14. 侧脑室平面\n<image>\n15. 四腔心切面\n<image>\n16. 下颌骨切面\n<image>\n17. 左室流出道切面\n<image>\n18. 动脉导管切面\n<image>\n19. 双肾横切面\n<image>\n20. 肱骨长轴切面\n<image>\n21. 双肾冠状切面\n<image>\n22. 四腔心切面（横）\n<image>\n23. 小脑平面\n<image>\n24. 单肾脏矢状面\n<image>\n25. 眶间距平面\n<image>\n26. 上牙槽突切面\n<image>\n27. 股骨长轴切面\n<image>\n28. 腹径测量横切面\n<image>\n29. 双顶径平面\n<image>\n作为一名超声医生，请依次查看以上图像（每张图片后注明解剖部位），并基于全部图像内容，提供 FINDINGS 和 IMPRESSION。"
+      },
+      {
+        "from": "gpt",
+        "content": "1.中孕 单活胎(临床孕周22w+3d)\n2.超声生物学测量相当于22w+0d\n3.脐带绕颈一周"
+      }
+    ]
+  }
+]
