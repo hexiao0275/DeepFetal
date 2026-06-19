@@ -3,7 +3,8 @@
  [Website](http://deepfetal.com/)  | [Model](https://huggingface.co/natureteam/DeepFetal)
 
 > *DeepFetal is a deconfounded multimodal AI system for full-gestation fetal ultrasound interpretation, enabling traceable diagnostic reasoning and robust clinical decision support.*
-> *Due to privacy and API access restrictions, online case testing is enabled only upon deployment. We kindly encourage users to download the model from Hugging Face and perform inference locally.*
+> 
+> *Due to privacy and API access restrictions, Web-based testing is enabled only upon deployment. We kindly encourage users to download the model from Hugging Face and perform inference locally.*
 
 For more details about our pipeline, please refer to our paper.
 
