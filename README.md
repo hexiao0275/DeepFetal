@@ -1,6 +1,6 @@
 # A Deconfounded Multimodal AI System for Fetal Ultrasound Interpretation
 
- [Website](http://deepfetal.com/)  | [Model](https://huggingface.co/natureteam/DeepFetal)
+[Website](http://deepfetal.com/) | [Model Download (Hugging Face)](https://huggingface.co/natureteam/DeepFetal)
 
 > *DeepFetal is a deconfounded multimodal AI system for full-gestation fetal ultrasound interpretation, enabling traceable diagnostic reasoning and robust clinical decision support.*
 > 
